@@ -4,24 +4,30 @@ import name as nm
 
 def letters_to_numbers(your_name):
     name_array = nm.name_to_array(your_name)
-    nmbs = []
+    nbr = []
     for c in name_array:
-        nmbs.append(ltr.letter_to_number(c))
+        nbr.append(ltr.letter_to_number(c))
 
-    return nmbs
+    return nbr
 
 
 def number_len(number):
     return len(str(abs(number)))
 
 
+def sum_digits(digits):
+    digit_list = []
+    if number_len(digits) >= 2:
+        for digit in str(digits):
+            digit_list.append(digit)
+        return sum(digit_list)
+    else:
+        return sum(digits)
+
+
 def sum_list(numbers_list):
     result = sum(numbers_list)
-
-    if number_len(result) > 2:
-        pass
-
-# sum digits
+    return sum_digits(result)
 
 
 name = 'Flavio'
