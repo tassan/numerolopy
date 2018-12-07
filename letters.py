@@ -38,3 +38,7 @@ letters_dictionary = {
     'y': 7,
     'z': 8
 }
+
+
+def letter_to_number(letter):
+    return letters_dictionary[letter]

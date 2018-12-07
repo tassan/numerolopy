@@ -1,9 +1,9 @@
 import letters as ltr
-
-# for x in ltr.alphabet_dictionary:
-#     for y in ltr.alphabet_dictionary[x]:
-#         print(y)
+import name as nm
 
 
-for x in ltr.letters_dictionary:
-    print(x)
+def letters_to_numbers(your_name):
+    name_array = nm.name_to_array(your_name)
+
+    for c in name_array:
+        pass
