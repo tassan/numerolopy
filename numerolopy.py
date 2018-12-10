@@ -1,14 +1,9 @@
-import letters as ltr
-import name as nm
+from letters import letters as ltr
+from names import name as nm
 
 
 def letters_to_numbers(your_name):
-    name_array = nm.name_to_array(your_name)
-    nbr = []
-    for c in name_array:
-        nbr.append(ltr.letter_to_number(c))
-
-    return nbr
+    pass
 
 
 def number_len(number):
@@ -29,10 +24,3 @@ def sum_list(numbers_list):
     result = sum(numbers_list)
     return sum_digits(result)
 
-
-name = 'Flavio'
-numbers = letters_to_numbers(name)
-
-print(letters_to_numbers(name))
-
-print(sum_list(numbers))
