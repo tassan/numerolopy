@@ -2,8 +2,9 @@ from letters import letters as ltr
 from names import name as nm
 
 
-def letters_to_numbers(your_name):
-    pass
+def letters_to_numbers(FullName):
+    validated = nm.validate_name(FullName)
+    validated = [validated.split(' ')]
 
 
 def number_len(number):
@@ -24,3 +25,7 @@ def sum_list(numbers_list):
     result = sum(numbers_list)
     return sum_digits(result)
 
+
+me = 'Flávio Tassan dos Santos Filho'
+
+print(letters_to_numbers(me))
