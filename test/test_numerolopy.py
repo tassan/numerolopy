@@ -11,5 +11,6 @@ assert nlp.number_len(number) == 2
 
 assert nlp.sum_digits(number) == 2
 
-assert nlp.find_numerology(name) == 2
+assert nlp.sum_list(number_list) == 29
 
+assert nlp.find_numerology(name) == 2

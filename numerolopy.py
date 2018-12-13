@@ -20,7 +20,11 @@ def sum_digits(digits):
     return result
 
 
-def find_numerology(person_name):
-    pass
+def sum_list(numbers_list):
+    return sum(numbers_list)
 
+
+def find_numerology(person_name):
+    numbers = letters_to_numbers(person_name)
+    return sum_digits(sum_list(numbers))
 
