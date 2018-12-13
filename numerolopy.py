@@ -3,19 +3,9 @@ from names import name as nm
 
 
 def letters_to_numbers(person_name):
-    numbers_list = []
     validated_name = nm.validate_name(person_name)
-
-    name_array = nm.name_to_array(validated_name)
-
-    if len(name_array) > 1:
-        for name in name_array:
-            for l in nm.letters_to_array(name):
-                numbers_list.append(ltr.letter_to_number(l))
-    else:
-        for l in nm.letters_to_array(name_array):
-            numbers_list.append(ltr.letter_to_number(l))
-    return numbers_list
+    letters_array = [l for l in validated_name]
+    return [ltr.letter_to_number(n) for n in letters_array]
 
 
 def number_len(number):
@@ -36,7 +26,3 @@ def sum_list(numbers_list):
     result = sum(numbers_list)
     return sum_digits(result)
 
-
-me = 'Flávio'
-
-print(letters_to_numbers(me))
