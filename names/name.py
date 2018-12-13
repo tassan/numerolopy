@@ -9,7 +9,8 @@ def name_to_array(person_name):
 
 # turn the given name in an array of its letters
 def letters_to_array(person_name):
-    return [l for l in to_lowercase(person_name)]
+    lowercase_name = to_lowercase(person_name)
+    return [l for l in lowercase_name]
 
 
 def to_lowercase(word):

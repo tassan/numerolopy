@@ -13,16 +13,14 @@ def number_len(number):
 
 
 def sum_digits(digits):
-    digit_list = []
-    if number_len(digits) >= 2:
-        for digit in str(digits):
-            digit_list.append(digit)
-        return sum(digit_list)
-    else:
-        return sum(digits)
+    digit_list = [int(n) for n in str(digits)]
+    result = sum(digit_list)
+    if number_len(result) == 2:
+        result = sum_digits(result)
+    return result
 
 
-def sum_list(numbers_list):
-    result = sum(numbers_list)
-    return sum_digits(result)
+def find_numerology(person_name):
+    pass
+
 
